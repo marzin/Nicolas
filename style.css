@@ -1,3 +1,28 @@
+/* red {color: hsla(0,98%,100%,1);} */
+/* grey {color: hsla(0,0%,39%,1);} */
+/* black {color: hsla(0,0%,0%,1);} */
+
+@font-face {
+  font-family: 'American Typewriter';
+  src: url('font/american_typewriter.eot?') format('eot'), url('font/american_typewriter.ttf') format('truetype');
+}
+
 html{
-	background-color: blue;
+	background-color: white;
+	font-family: 'American Typewriter';
+}
+
+header{
+	margin: 0 auto;
+}
+
+.title{
+	font-size: 3.4em;
+	color: hsla(0,0%,39%,1);
+}
+.nowrap{white-space:nowrap;}
+
+.title img{
+	position: relative;
+	top: 30px;
 }
