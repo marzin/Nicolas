@@ -1,10 +1,13 @@
 /* red {color: hsla(0,98%,100%,1);} */
 /* grey {color: hsla(0,0%,39%,1);} */
 /* black {color: hsla(0,0%,0%,1);} */
+* {
+	box-sizing: border-box;
+}
 
 @font-face {
-  font-family: 'American Typewriter';
-  src: url('font/american_typewriter.eot?') format('eot'), url('font/american_typewriter.ttf') format('truetype');
+	font-family: 'American Typewriter';
+	src: url('font/american_typewriter.eot?') format('eot'), url('font/american_typewriter.ttf') format('truetype');
 }
 
 html{
@@ -12,17 +15,70 @@ html{
 	font-family: 'American Typewriter';
 }
 
+body{
+	display: flex;
+	min-height: 95vh;
+	width: 95vw;
+	margin: 0 auto;
+	flex-direction: column;
+}
+
 header{
 	margin: 0 auto;
+	text-align: center;
 }
 
 .title{
-	font-size: 3.4em;
+	font-size: 2.2em;
 	color: hsla(0,0%,39%,1);
 }
 .nowrap{white-space:nowrap;}
 
 .title img{
 	position: relative;
-	top: 30px;
+	top: 15px;
+}
+
+header{
+	/*background-color: blue;*/
+}
+section{
+	background-color: red;
+	/*flex: 1;*/
+	/*height: 1600px;*/
+}
+footer{
+	/*background-color: green;*/
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	width: 95vw;
+	margin-bottom: 15px;
+}
+
+footer>div>div>div{
+	display: inline-block;
+	text-align: center;
+	width: 250px;
+}
+
+.icon::before{
+	content: '';
+	display: inline-block;
+	width: 20px; 
+	height: 20px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	vertical-align: -50%;
+	margin-top: 16px;
+	margin-right: 10px;
+}	
+
+.home::before{background-image: url(svg/home.svg);}
+.phone::before{background-image: url(svg/phone.svg);}
+.mail::before{background-image: url(svg/mail.svg);}
+.schedule::before{background-image: url(svg/schedule.svg);}
+
+[itemprop="streetAddress"] {
+	display: inline-block;
 }
