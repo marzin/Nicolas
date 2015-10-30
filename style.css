@@ -11,26 +11,39 @@
 }
 
 html{
-	background-color: white;
+	/*background-color: white;*/
 	font-family: 'American Typewriter';
+	/*margin-left: calc(100vw - 100%);
+	margin-right: 0;*/
 }
 
 body{
 	display: flex;
-	min-height: 95vh;
-	width: 95vw;
-	margin: 0 auto;
+	min-height: 100vh;
+	width: 98vw;
 	flex-direction: column;
+	margin: 0;
+	overflow-x: hidden;
+	/*background-image: url(imgs/bg-wood.jpg);
+	background-size: cover;*/
+	/*background-color: hsla(66,66%,80%,0.5);*/
+	background-image: url(imgs/white-wood-bg.jpg);
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 header{
-	margin: 0 auto;
 	text-align: center;
+	padding-bottom: 15px;
+	background-color: hsla(0,0%,80%,0.5); 
+	border-bottom: 2px solid hsla(0,0%,39%,1);
 }
 
 .title{
-	font-size: 2.2em;
-	color: hsla(0,0%,39%,1);
+	font-size: 3em;
+	/*color: hsla(0,0%,39%,1);*/
 }
 .nowrap{white-space:nowrap;}
 
@@ -39,21 +52,31 @@ header{
 	top: 15px;
 }
 
-header{
-	/*background-color: blue;*/
-}
 section{
-	background-color: red;
+	/*background-color: red;*/
 	/*flex: 1;*/
 	/*height: 1600px;*/
+	margin-bottom: 123px;
 }
+
+@media screen and (max-width: 629px) {
+	section{
+		margin-bottom: 231px;
+	}
+}
+
 footer{
 	/*background-color: green;*/
 	text-align: center;
 	position: fixed;
+	width: 99vw;
 	bottom: 0;
-	width: 95vw;
-	margin-bottom: 15px;
+	padding-bottom: 5px;
+	background-color: hsla(0,0%,80%,1); 
+	border-top: 2px solid hsla(0,0%,39%,1);
+}
+.icon_bloc+.icon_bloc{
+	margin-top: 10px;
 }
 
 footer>div>div>div{
@@ -70,10 +93,10 @@ footer>div>div>div{
 	background-size: cover;
 	background-repeat: no-repeat;
 	vertical-align: -50%;
-	margin-top: 16px;
 	margin-right: 10px;
 }	
 
+/*.home::before{-webkit-mask: url(svg/home.svg);mask: url(svg/home.svg);}*/
 .home::before{background-image: url(svg/home.svg);}
 .phone::before{background-image: url(svg/phone.svg);}
 .mail::before{background-image: url(svg/mail.svg);}
@@ -81,4 +104,40 @@ footer>div>div>div{
 
 [itemprop="streetAddress"] {
 	display: inline-block;
+}
+
+article{
+	max-width: 760px;
+	min-height: 300px;
+	
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 10px;
+	background-color: hsla(0,0%,80%,0.5); 
+}
+article + article {
+	border-top: 2px dashed hsla(0,0%,39%,1);
+}
+article img{
+	width: 50%;
+	margin-bottom: 15px;
+}
+article p{
+	text-align: justify;
+}
+.fl{float: left;margin-right: 15px;}
+.fr{float: right;margin-left: 15px;}
+.hidden{display: none;}
+
+article>h1::before{
+	content: ' ';
+	background-image:  url(imgs/o-letter.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top left;
+	display: inline-block;
+	width: 50px;
+	height: 47px;
+	vertical-align: middle;
+	margin-right: 5px;
 }

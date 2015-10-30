@@ -5,70 +5,107 @@
 	<title>Les crus des vignerons</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="icon" type="image/x-icon" href="imgs/favicon.ico" />
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script>
+		function initialize() {
+			var mapCanvas = document.getElementById('map');
+			var mapOptions = {
+				center: new google.maps.LatLng(47.666866, -2.992216),
+				zoom: 8,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			}
+			var map = new google.maps.Map(mapCanvas, mapOptions);
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
 </head>
 <body>
 	<header>
 		<span class="title">Les crus des <span class="nowrap">Vigner<img src="imgs/o-letter.png" alt="logo">ns</span></span>
 	</header>
-	<section>coucou
+	<section>
+		
+		<article>
+			<h1>Vins rouges du Sud Ouest – Nos coups de coeur</h1>
+			<img src="imgs/barrique3.jpg"  class="fl">
+			<p>Nous avons préparé une nouvelle sélection d’une partie des vins du Sud Ouest disponibles à notre cave . Quelque soit vos envies, vous trouverez le vin adéquat pour accompagner votre menu. 
+			</p>
+			<p> Du vin charnu au vin rond et gourmand en passant par des notes de vanille et de fruits rouges, nos vins colleront parfaitement à la cuisine de cette région.
+			</p>
+		</article>
+		
+		<article>
+			<h1>Notre sélection de vins de Loire</h1>
+			<img src="imgs/table-71380_640.jpg" class="fr">
+			<p>
+				Nous avons pour vous, fait une sélection d’une partie des vins de Loire dont nous disposons. Quelque soit votre repas, vous pourrez trouver le vin idéal pour accompagner votre menu.
+			</p> 
+			<p> 
+				Du vin fruité au vin minéral en passant pas des touches florales sans oublier quelques vins bio, nous espérons que notre sélection satisfera les grands amateurs de vins comme les novices.
+			</p>
+		</article>
+
+		<article>
+			<h1>Cours d'&oelig;nologie</h1>
+			<img src="imgs/cours-oenologie-Paris.jpg"  class="fl">
+			<p>L’atelier ŒNOLOGIE du CFC propose 10 cours de 2 h par an, à raison d’1 cours par mois, de septembre à juin.
+				Les cours, regroupant une quinzaine de participants, sont assurés par Nicolas Colloc’h. Les thèmes abordés sont à chaque fois différents : régions, cépages, producteurs, vins étrangers, techniques de vinification.
+			</p>
+			<p>
+				Lors de chaque cours, 5 vins font l’objet d’exposés, dégustations, comparaisons…
+				Un voyage dans une région viticole est proposé chaque année. 
+			</p>
+			<p>
+				<b> En 2015 : la vallée du Douro au Portugal</b>.
+			</p>
+		</article>
+		<article>
+			<h1>Nous rendre visite</h1>
+			<iframe width="98%" height="350px" frameborder="0" style="border:0"
+			src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJW6ZE7UEUEEgRPMqfzQ6gy_s&key=AIzaSyBxOLKVJYArt5UKPTHvcan7rpkNOuukzwY" allowfullscreen></iframe>
+		</article>
 	</section>
-	<!-- <footer>
-	<p class="icon home">
-	38 rue Louis Billet, 56400 AURAY	
-	</p>
-	<p class="icon phone">
-	<a href="tel:+33297566666">02 97 56 66 66</a>
-	</p>
-	<p class="icon mail">
-		<a href="mailto:crusdesvignerons@orange.fr">
-	crusdesvignerons@orange.fr</a>
-	</p>
-	<p class="icon schedule">
-	Du Lundi Au Samedi<br>
-	9.15-12.15/14.45-19.15	
-	</p>
-</footer> -->
-<footer>
-	<div itemscope itemtype="http://schema.org/LocalBusiness">
-		<div>
-			<div itemprop="name"><!-- Les crus des Vignerons --></div>
+	<footer>
+		<div itemscope itemtype="http://schema.org/LocalBusiness">
+			<div class="hidden">
+				<div itemprop="name"><!-- Les crus des Vignerons --></div>
 
 
-			<!-- <div><span itemprop="url"><a href='http://www.marzin.free.fr/nicolas/'>http://www.marzin.free.fr/nicolas/</a></span></div> -->
+				<!-- <div><span itemprop="url"><a href='http://www.marzin.free.fr/nicolas/'>http://www.marzin.free.fr/nicolas/</a></span></div> -->
 
-			<meta itemprop="openingHours"  style='display: none'  datetime="Mo,Tu,We,Th,Fr,Sa 09:15-12:15" />
-			<meta itemprop="openingHours"  style='display: none'  datetime="Mo,Tu,We,Th,Fr,Sa 14:45-19:15" />
-			<div itemprop="paymentAccepted"  style='display: none' >cash, credit card</div>
-			<div itemtype="http://schema.org/GeoCoordinates" itemscope="" itemprop="geo">
-				<meta itemprop="latitude" content="47.666866" />
-				<meta itemprop="longitude" content="-2.992216" />
+				<meta itemprop="openingHours"  style='display: none'  datetime="Mo,Tu,We,Th,Fr,Sa 09:15-12:15" />
+				<meta itemprop="openingHours"  style='display: none'  datetime="Mo,Tu,We,Th,Fr,Sa 14:45-19:15" />
+				<div itemprop="paymentAccepted"  style='display: none' >cash, credit card</div>
+				<div itemtype="http://schema.org/GeoCoordinates" itemscope="" itemprop="geo">
+					<meta itemprop="latitude" content="47.666866" />
+					<meta itemprop="longitude" content="-2.992216" />
 
+				</div>
+			</div>
+			<div class="icon_bloc">
+				<div class="icon home" itemtype="http://schema.org/PostalAddress" itemscope="" itemprop="address">
+					<div itemprop="streetAddress">38 rue Louis Billet</div>
+					<div><span itemprop="addressLocality">AURAY</span>, <span itemprop="addressRegion"></span> <span itemprop="postalCode">56400</span></div>
+				</div>
+
+				<div class="icon schedule"><span>Du Lundi Au Samedi<br>
+					9.15-12.15/14.45-19.15</span>
+				</div>
+			</div>
+			<div class="icon_bloc">
+				<div>
+					<span  class="icon phone" itemprop="telephone">
+						<a href="tel:+33297566666">
+							02 97 56 66 66
+						</a>
+					</span>
+				</div>
+
+				<div><span class="icon mail" itemprop="email"><a href='mailto:crusdesvignerons@orange.fr'>crusdesvignerons@orange.fr</a></span>
+				</div>
 			</div>
 		</div>
-		<div>
-			<div class="icon home" itemtype="http://schema.org/PostalAddress" itemscope="" itemprop="address">
-				<div itemprop="streetAddress">38 rue Louis Billet</div>
-				<div><span itemprop="addressLocality">AURAY</span>, <span itemprop="addressRegion"></span> <span itemprop="postalCode">56400</span></div>
-			</div>
 
-			<div class="icon schedule"><span>Du Lundi Au Samedi<br>
-				9.15-12.15/14.45-19.15</span>
-			</div>
-		</div>
-		<div>
-			<div>
-				<span  class="icon phone" itemprop="telephone">
-					<a href="tel:+33297566666">
-						02 97 56 66 66
-					</a>
-				</span>
-			</div>
-
-			<div><span class="icon mail" itemprop="email"><a href='mailto:crusdesvignerons@orange.fr'>crusdesvignerons@orange.fr</a></span>
-			</div>
-		</div>
-	</div>
-
-</footer>
+	</footer>
 </body>
 </html>
